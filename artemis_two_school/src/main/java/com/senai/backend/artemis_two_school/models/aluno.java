@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "aluno")
-public class aluno {
+public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,13 +24,13 @@ public class aluno {
     private Date dataNascimento;
     @Column (name = "email")
     private String email;
-    public aluno(Long id, String nome, Date dataNascimento, String email) {
+    public Aluno(Long id, String nome, Date dataNascimento, String email) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.email = email;
     }
-    public aluno() {
+    public Aluno() {
     }
     public Long getId() {
         return id;

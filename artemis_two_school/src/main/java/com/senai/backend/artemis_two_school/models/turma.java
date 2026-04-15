@@ -12,7 +12,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 @Table (name = "turma")
 @Entity
-public class turma {
+public class Turma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
@@ -23,12 +23,12 @@ public class turma {
     @JoinColumn(name = "id_turma")
     @Column(name = "alunos")
     private List alunos;
-    public turma(Long id, String nome, List alunos) {
+    public Turma(Long id, String nome, List alunos) {
         this.id = id;
         this.nome = nome;
         this.alunos = alunos;
     }
-    public turma() {
+    public Turma() {
     }
     public Long getId() {
         return id;
