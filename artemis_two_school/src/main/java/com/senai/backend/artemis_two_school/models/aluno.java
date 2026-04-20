@@ -17,14 +17,14 @@ import jakarta.persistence.Table;
 public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column(name = "nome")
     private String nome;
     @Column(name = "data_nascimento")
     private Date dataNascimento;
     @Column (name = "email")
     private String email;
-    public Aluno(Long id, String nome, Date dataNascimento, String email) {
+    public Aluno(Integer id, String nome, Date dataNascimento, String email) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -32,10 +32,10 @@ public class Aluno {
     }
     public Aluno() {
     }
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getNome() {

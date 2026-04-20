@@ -15,25 +15,25 @@ import jakarta.persistence.Table;
 public class Turma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private Long id;
+    private Integer id;
     @Column(name = "nome")
     private String nome;
 
     @OneToMany
     @JoinColumn(name = "id_turma")
     @Column(name = "alunos")
-    private List alunos;
-    public Turma(Long id, String nome, List alunos) {
+    private List <Aluno> alunos;
+    public Turma(Integer id, String nome, List <Aluno> alunos) {
         this.id = id;
         this.nome = nome;
         this.alunos = alunos;
     }
     public Turma() {
     }
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getNome() {
@@ -42,10 +42,10 @@ public class Turma {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public List getAlunos() {
+    public List <Aluno> getAlunos() {
         return alunos;
     }
-    public void setAlunos(List alunos) {
+    public void setAlunos(List <Aluno> alunos) {
         this.alunos = alunos;
     }
     

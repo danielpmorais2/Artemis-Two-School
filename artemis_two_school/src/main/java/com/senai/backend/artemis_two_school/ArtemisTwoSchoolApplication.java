@@ -8,6 +8,7 @@ public class ArtemisTwoSchoolApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ArtemisTwoSchoolApplication.class, args);
+		System.out.println("Cheguei! ");
 	}
 
 }
